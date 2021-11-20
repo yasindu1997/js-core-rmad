@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js - Core</title>
+</head>
+
+<body>
+    <h1 style="color: red;">Hello Javascript</h1>
+    <button id="btn" onclick="click">Click Me</button>
+
+    <input type="date" name="" id="">
+
+    <script>
+        // flow controllers
+
+        // if else statement
+
+        let num1 = 30;
+        let num2 = 30;
+
+        if (num1 == 20) {
+            console.log("True");
+        } else if (num1 < 30) {
+            console.log("True 2");
+        } else if (num1 < 50) {
+            console.log("True 3");
+        } else {
+            console.log("False");
+        }
+
+        // swich statement
+
+        switch (num1) {
+            case 20:
+                console.log("num1 is 20");
+                break;
+            case 25:
+                console.log("num1 is 25");
+                break;
+            case 30:
+                console.log("num1 is 30");
+                break;
+            default:
+                console.log("defalut print");
+        }
+
+        let sum = getSum(10,12);
+
+        console.log("hello");
+
+        let sum2 = getSum(56,89);
+
+        let sum3 = getSum(50, 60);
+
+        console.log(sum3);
+
+        function getSum(x, y) {
+            return x + y;
+        }
+
+    </script>
+    <!-- <script src="main.js"></script> -->
+</body>
+
+</html>
