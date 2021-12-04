@@ -9,57 +9,43 @@
 </head>
 
 <body>
-    <h1 style="color: red;">Hello Javascript</h1>
-    <button id="btn" onclick="click">Click Me</button>
+    <h1 style="color: red;" id="lable" onmouseover="changeColor()">Hello Javascript</h1>
+    <button id="btn" onclick="changeText()">Click Me</button>
+
+    <h2>I'm A <span id="engineer" onmouseenter="mouseEnter()" onmouseleave="mouseOut()">Software Engineer</span></h2>
 
     <input type="date" name="" id="">
 
+    <br><br><br>
+
+    <input type="text" name="" placeholder="Enter Your name" id="name">
+
+    <button onclick="modifyText()">Modify Text</button>
+
+    <P id="result"></P>
+
     <script>
-        // flow controllers
 
-        // if else statement
-
-        let num1 = 30;
-        let num2 = 30;
-
-        if (num1 == 20) {
-            console.log("True");
-        } else if (num1 < 30) {
-            console.log("True 2");
-        } else if (num1 < 50) {
-            console.log("True 3");
-        } else {
-            console.log("False");
+        function changeText() {
+            document.getElementById('lable').innerText = "Hello IJSE";
+            console.log("Button Clicked");
         }
 
-        // swich statement
-
-        switch (num1) {
-            case 20:
-                console.log("num1 is 20");
-                break;
-            case 25:
-                console.log("num1 is 25");
-                break;
-            case 30:
-                console.log("num1 is 30");
-                break;
-            default:
-                console.log("defalut print");
+        function changeColor() {
+            document.getElementById('lable').style = "color:green";
         }
 
-        let sum = getSum(10,12);
+        function mouseEnter() {
+            document.getElementById('engineer').innerText = "DevOps Engineer";
+        }
 
-        console.log("hello");
+        function mouseOut() {
+            document.getElementById('engineer').innerText = "Full Stack Developer"
+        }
 
-        let sum2 = getSum(56,89);
-
-        let sum3 = getSum(50, 60);
-
-        console.log(sum3);
-
-        function getSum(x, y) {
-            return x + y;
+        function modifyText() {
+            let name = document.getElementById('name').value;
+            document.getElementById('result').innerText="Hello "+name+" How are you?"
         }
 
     </script>
